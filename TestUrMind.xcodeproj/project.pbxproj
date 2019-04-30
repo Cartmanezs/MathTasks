@@ -12,6 +12,7 @@
 		CE894D512277432400A040A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE894D4F2277432400A040A0 /* Main.storyboard */; };
 		CE894D532277432600A040A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE894D522277432600A040A0 /* Assets.xcassets */; };
 		CE894D562277432600A040A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE894D542277432600A040A0 /* LaunchScreen.storyboard */; };
+		CE894D5E2278D5A600A040A0 /* ExtensionForButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE894D5D2278D5A600A040A0 /* ExtensionForButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CE894D522277432600A040A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE894D552277432600A040A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE894D572277432600A040A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE894D5D2278D5A600A040A0 /* ExtensionForButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionForButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				CE894D4B2277432400A040A0 /* AppDelegate.swift */,
 				CE894D4D2277432400A040A0 /* ViewController.swift */,
+				CE894D5D2278D5A600A040A0 /* ExtensionForButton.swift */,
 				CE894D4F2277432400A040A0 /* Main.storyboard */,
 				CE894D522277432600A040A0 /* Assets.xcassets */,
 				CE894D542277432600A040A0 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				CE894D4E2277432400A040A0 /* ViewController.swift in Sources */,
 				CE894D4C2277432400A040A0 /* AppDelegate.swift in Sources */,
+				CE894D5E2278D5A600A040A0 /* ExtensionForButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

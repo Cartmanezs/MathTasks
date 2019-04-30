@@ -16,16 +16,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerTextField: UITextField!
     @IBOutlet weak var textButton: UIButton!
     
+
     @IBAction func pressedNextBtn(_ sender: Any)
     {
-      
+        
+        let disableNextButton = sender as? UIButton
+     //   disableNextButton?.isEnabled = false
+        
         while true
         {
             guard
                 let numberOne = self.numbers.randomElement(),
                 let numberTwo = self.numbers.randomElement(),
                 let signRandom = self.signsMath.randomElement()
-                
                 else{
                     return
             }
@@ -40,15 +43,30 @@ class ViewController: UIViewController {
                 switch signRandom {
                     case "+" :
                         result = Int(numberOne) + Int(numberTwo)
+                        if answerTextField.text == String(result) {
+                          print("good")
+                        }else {
+                            return
+                    }
+                       
                     
                     case "-" :
                         result = Int(numberOne) - Int(numberTwo)
+                        guard answerTextField.text == String(result) else {
+                            return
+                    }
                     
                     case "*":
                         result = Int(numberOne) * Int(numberTwo)
+                        guard answerTextField.text == String(result) else {
+                            return
+                    }
                     
                     case "/":
                         result = Int(numberOne) / Int(numberTwo)
+                        guard answerTextField.text == String(result) else {
+                            return
+                    }
                     
                     default:
                         break
@@ -73,9 +91,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        textButton.bindToKeyboard() // Do any additional setup after loading the view.
     }
 
 
+    
 }
+
+
 
