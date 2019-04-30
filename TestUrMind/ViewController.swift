@@ -17,11 +17,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var textButton: UIButton!
     
 
+    
+    
     @IBAction func pressedNextBtn(_ sender: Any)
     {
-        
-        let disableNextButton = sender as? UIButton
-     //   disableNextButton?.isEnabled = false
+       
         
         while true
         {
@@ -43,36 +43,20 @@ class ViewController: UIViewController {
                 switch signRandom {
                     case "+" :
                         result = Int(numberOne) + Int(numberTwo)
-                        if answerTextField.text == String(result) {
-                          print("good")
-                        }else {
-                            return
-                    }
-                       
+                    
                     
                     case "-" :
                         result = Int(numberOne) - Int(numberTwo)
-                        guard answerTextField.text == String(result) else {
-                            return
-                    }
                     
                     case "*":
                         result = Int(numberOne) * Int(numberTwo)
-                        guard answerTextField.text == String(result) else {
-                            return
-                    }
                     
                     case "/":
                         result = Int(numberOne) / Int(numberTwo)
-                        guard answerTextField.text == String(result) else {
-                            return
-                    }
                     
                     default:
                         break
                 }
-                
-               
                 break
             }
         }
@@ -91,7 +75,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textButton.bindToKeyboard() // Do any additional setup after loading the view.
+        textButton.bindToKeyboard()
+     
+
+      //  answerTextField.smartInsertDeleteType = UITextSmartInsertDeleteType.no
+      //  answerTextField.delegate = self as? UITextFieldDelegate
+        // Do any additional setup after loading the view.
     }
 
 
